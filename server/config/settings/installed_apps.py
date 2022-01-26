@@ -15,7 +15,9 @@ INSTALLED_APPS = [
     'corsheaders',
 ]
 
-LOCAL_APPS = []
+LOCAL_APPS = [
+    'apps.celery_tasks',
+]
 
 INSTALLED_APPS += LOCAL_APPS
 
