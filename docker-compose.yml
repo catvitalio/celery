@@ -37,7 +37,7 @@ services:
         build:
             context: ./
             dockerfile: ./server/Dockerfile
-        command: celery -A config worker -B -l info -Q default,celery -s /var/run/celerybeat-schedule
+        command: celery -A config worker -B -l info -Q priority,default -s /var/run/celerybeat-schedule
         volumes:
             - ./server:/server
         depends_on:
